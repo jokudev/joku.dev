@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>joku.dev</title>
+    <meta name="description" content="Joshua Kunz — Interactive Terminal Portfolio" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app" class="min-h-screen p-4 md:p-8" role="log" aria-live="polite" aria-label="Terminal session"></div>
+    <input
+      id="term-input"
+      type="text"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      class="sr-only"
+      aria-label="Terminal input"
+    />
+    <script type="module" src="/src/main.ts"></script>
+    <noscript>
+      <div class="text-text-secondary p-8">
+        Diese Seite benötigt JavaScript für das Terminal.
+        Besuche stattdessen die statische Version auf dem <a href="https://joshuakunz.com">Hauptportfolio.</a>
+      </div>
+    </noscript>
+  </body>
+</html>
