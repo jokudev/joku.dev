@@ -69,7 +69,7 @@ function projectReadme(slug: string): string {
 
 function educationMarkdown(index: number): string {
   const entry = CONTENT.education[index];
-  return [`# ${entry.title}`, '', `${entry.period}`, `${entry.org}`, entry.location].filter(Boolean).join('\n');
+  return [`# ${entry.title}`, '', `${entry.period}`, `${entry.org}`, entry.location, entry.result].filter(Boolean).join('\n');
 }
 
 export function createFilesystem(): FSNode {
