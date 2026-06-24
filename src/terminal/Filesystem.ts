@@ -103,7 +103,7 @@ export function createFilesystem(): FSNode {
         stackDir,
         dir('education', [
           file('swiss-aviation.md', educationMarkdown(0)),
-          file('bbm.md', educationMarkdown(1)),
+          file('bm.md', educationMarkdown(1)),
           file('sekundarschule.md', educationMarkdown(2)),
         ]),
         dir('competitions', [file('swissskills.md', competitionsText)]),

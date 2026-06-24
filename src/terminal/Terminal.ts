@@ -251,7 +251,7 @@ export class Terminal {
 
   private promptPrefix(): string {
     const path = this.fs.displayPath(this.cwd);
-    return `<span class="text-cyan">joshua@${CONTENT.user.host}</span><span class="text-text-secondary">:</span><span class="text-amber">${path}</span><span class="text-text-primary">$ </span>`;
+    return `<span class="text-cyan">guest@${CONTENT.user.host}</span><span class="text-text-secondary">:</span><span class="text-amber">${path}</span><span class="text-text-primary">$ </span>`;
   }
 
   private focusInput(): void {

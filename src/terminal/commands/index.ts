@@ -108,7 +108,7 @@ export function commandNames(): string[] {
 export const easterEggs: CommandHandler = async (ctx) => {
   const raw = ctx.rawInput.trim();
   if (raw.startsWith('sudo ')) {
-    return [{ text: 'joshua is not in the sudoers file. This incident will be reported.', className: 'text-red' }];
+    return [{ text: 'guest is not in the sudoers file. This incident will be reported.', className: 'text-red' }];
   }
   if (raw === 'rm -rf /') {
     return [
