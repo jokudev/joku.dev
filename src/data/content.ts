@@ -2,7 +2,7 @@ export const CONTENT = {
   user: {
     name: 'Joshua Kunz',
     host: 'joku-dev',
-    role: 'EFZ Applikationsentwicklung',
+    role: 'Informatiker EFZ Applikationsentwicklung',
     location: 'Basel, CH',
     birth: '2007',
     email: 'contact@joshuakunz.com',
@@ -11,7 +11,7 @@ export const CONTENT = {
   },
 
   about: {
-    bio: 'Ich bin Joshua Kunz, 2007 in Basel geboren, und absolviere seit August 2022 die Lehre als Informatiker EFZ Applikationsentwicklung bei Swiss Aviation Software Ltd. Ich arbeite praxisnah an Java- und Backend-Themen, baue im Homelab Cloud-native Infrastruktur mit Linux, Kubernetes, Docker, Terraform und Ansible auf und vertiefe mich kontinuierlich in DevOps, Betrieb und Systemdesign.',
+    bio: 'Ich bin Joshua Kunz, 2007 in Basel geboren, und habe die Lehre als Informatiker EFZ Applikationsentwicklung bei Swiss Aviation Software Ltd. erfolgreich abgeschlossen (EFZ im Rang, Note 5.7) sowie die Technische Berufsmaturität mit Note 4.9 absolviert. Ich arbeite praxisnah an Java- und Backend-Themen, baue im Homelab Cloud-native Infrastruktur mit Linux, Kubernetes, Docker, Terraform und Ansible auf und vertiefe mich kontinuierlich in DevOps, Betrieb und Systemdesign.',
     languages: ['Deutsch — Muttersprache', 'Englisch — C1'],
     interests: ['Musik', 'Kochen', 'Gaming', 'Lesen', 'Technologie', 'Reisen'],
   },
@@ -35,12 +35,14 @@ export const CONTENT = {
       title: 'Lehre Informatiker EFZ – Applikationsentwicklung',
       org: 'Swiss Aviation Software Ltd.',
       location: 'Allschwil',
+      result: 'Abgeschlossen im Rang — Note 5.7',
     },
     {
       period: '2022 – 2026',
       title: 'Technische Berufsmaturität',
       org: 'Berufsbildungszentrum Baselland',
       location: '',
+      result: 'Abgeschlossen — Note 4.9',
     },
     {
       period: '2019 – 2022',
@@ -76,7 +78,7 @@ export const CONTENT = {
       slug: 'swiss-aviation-software',
       title: 'Berufliche Applikationsentwicklung',
       description:
-        'Praxisnahe Java- und Backend-Aufgaben im Rahmen der Lehre bei Swiss Aviation Software Ltd.',
+        'Praxisnahe Java- und Backend-Aufgaben bei Swiss Aviation Software Ltd.',
       tags: ['Java', 'Applikationsentwicklung'],
       bullets: [
         'Mitarbeit an produktionsnahen Applikationsmodulen und strukturierten Entwicklungsprozessen.',

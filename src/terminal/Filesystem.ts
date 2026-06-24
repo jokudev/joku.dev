@@ -69,7 +69,7 @@ function projectReadme(slug: string): string {
 
 function educationMarkdown(index: number): string {
   const entry = CONTENT.education[index];
-  return [`# ${entry.title}`, '', `${entry.period}`, `${entry.org}`, entry.location].filter(Boolean).join('\n');
+  return [`# ${entry.title}`, '', `${entry.period}`, `${entry.org}`, entry.location, entry.result].filter(Boolean).join('\n');
 }
 
 export function createFilesystem(): FSNode {
@@ -103,7 +103,7 @@ export function createFilesystem(): FSNode {
         stackDir,
         dir('education', [
           file('swiss-aviation.md', educationMarkdown(0)),
-          file('bbm.md', educationMarkdown(1)),
+          file('bm.md', educationMarkdown(1)),
           file('sekundarschule.md', educationMarkdown(2)),
         ]),
         dir('competitions', [file('swissskills.md', competitionsText)]),

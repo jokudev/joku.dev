@@ -12,7 +12,7 @@ const rows = [
   ['pwd', 'Show current path'],
   ['echo [text]', 'Print text or env vars'],
   ['date', 'Current datetime (de-CH)'],
-  ['uptime', 'Career uptime since Aug 2022'],
+  ['uptime', 'Show time since the latest site build'],
   ['history', 'Show command history'],
   ['git log --oneline', 'Show milestone commits'],
   ['kubectl get achievements', 'Show SwissSkills table'],
