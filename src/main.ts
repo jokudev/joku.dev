@@ -1,5 +1,8 @@
 import './style.css';
+import { initAnalytics } from './analytics';
 import { Terminal } from './terminal/Terminal';
+
+initAnalytics();
 
 const app = document.getElementById('app');
 const input = document.getElementById('term-input') as HTMLInputElement | null;

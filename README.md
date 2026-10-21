@@ -15,6 +15,10 @@ npm run dev
 npm run build
 ```
 
+## Analytics
+
+Set `VITE_GA_MEASUREMENT_ID` to enable Google Analytics (GA4) tracking.
+
 ## Commands
 
 - `help`
