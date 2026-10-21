@@ -18,6 +18,7 @@ npm run build
 ## Analytics
 
 Set `VITE_GA_MEASUREMENT_ID` to enable Google Analytics (GA4) tracking.
+When enabled, clicks on social links and `/cv.pdf` are tracked as custom events.
 
 ## Commands
 

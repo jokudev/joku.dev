@@ -1,4 +1,5 @@
 import { CONTENT } from '../data/content';
+import { trackTerminalLinkClick } from '../analytics';
 import { Autocomplete } from './Autocomplete';
 import { CommandParser } from './CommandParser';
 import { Filesystem } from './Filesystem';
@@ -84,7 +85,11 @@ export class Terminal {
   private bindEvents(): void {
     this.app.addEventListener('click', (event) => {
       const target = event.target as HTMLElement | null;
-      if (target?.closest('a')) return;
+      const link = target?.closest('a');
+      if (link instanceof HTMLAnchorElement) {
+        trackTerminalLinkClick(link.href, link.textContent?.trim() ?? '');
+        return;
+      }
       if (window.getSelection()?.toString()) return;
       this.focusInput();
     });
