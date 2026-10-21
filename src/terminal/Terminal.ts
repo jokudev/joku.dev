@@ -1,4 +1,5 @@
 import { CONTENT } from '../data/content';
+import { trackEvent } from '../analytics';
 import { Autocomplete } from './Autocomplete';
 import { CommandParser } from './CommandParser';
 import { Filesystem } from './Filesystem';
@@ -84,7 +85,11 @@ export class Terminal {
   private bindEvents(): void {
     this.app.addEventListener('click', (event) => {
       const target = event.target as HTMLElement | null;
-      if (target?.closest('a')) return;
+      const anchor = target?.closest('a');
+      if (anchor) {
+        this.trackLinkClick(anchor);
+        return;
+      }
       if (window.getSelection()?.toString()) return;
       this.focusInput();
     });
@@ -101,6 +106,19 @@ export class Terminal {
     this.input.addEventListener('click', () => this.renderActiveInput());
     this.input.addEventListener('keyup', () => this.renderActiveInput());
     this.input.addEventListener('keydown', (event) => this.onKeyDown(event));
+  }
+
+  private trackLinkClick(anchor: HTMLAnchorElement): void {
+    const url = new URL(anchor.href, window.location.href);
+
+    if (url.origin === window.location.origin && url.pathname === '/cv.pdf') {
+      trackEvent('cv_view');
+      return;
+    }
+
+    if (url.hostname === 'github.com') {
+      trackEvent('social_link_click', { platform: 'github' });
+    }
   }
 
   private onKeyDown(event: KeyboardEvent): void {
