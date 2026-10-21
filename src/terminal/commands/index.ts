@@ -1,4 +1,5 @@
 import { CONTENT } from '../../data/content';
+import { trackEvent } from '../../analytics';
 import { formatBuildTimestamp, formatBuildUptime } from '../../data/build';
 import { cd } from './cd';
 import { cat } from './cat';
@@ -80,6 +81,8 @@ const builtins: Record<string, CommandHandler> = {
     if (ctx.parsed.args[0] !== 'cv.pdf') {
       return [{ text: "wget: only 'wget cv.pdf' is available", className: 'text-red' }];
     }
+
+    trackEvent('cv_download');
 
     const steps = [8, 23, 38, 54, 71, 86, 100];
     for (const step of steps) {
